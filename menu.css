@@ -1,4 +1,13 @@
 
+/* 
+* PALETA DE CORES: 
+    #F2884B ---> LARANJA FORTE
+    #F29D52 ---> LARANJA DEFAULT
+    #F2AC57 ---> LARANJA FRACO
+    #F2CDA0 ---> LARANJA BEM FRACO
+    #F2F2F2 ---> CINZA
+*/ 
+
 * {
     margin: auto;
     padding: 0;
@@ -6,24 +15,15 @@
 }
 
 header {
-    /* display: flex; */
     display: grid;
     grid-template-columns: 200px 1fr;
-    background-color: #ff914d;
+    background-color: #F29D52;
     top: 0;
     width: 100%;
-    height: 4em;
-    padding: 1em;
-    position: fixed;
-
-
 }
 
 header img {
     width: 80px;
-    display: grid;
-    grid-column: 1/2;
-    align-items: center;
 }
 
 nav {
@@ -31,36 +31,33 @@ nav {
     /* display: flex; */
     /* align-items: center; */
     grid-column: 2/3;
+}
+
+ul.navbar { 
+=======
     justify-items: center;
     text-align:center;
     align-items: center;
 }
 
-ul { 
-    /* display: flex; */
-    gap: 4em;
-    /* justify-content: flex-end;*/
-    justify-items: center;
-    text-align:center;
-    align-items: center;
-}
 
-li {
-    letter-spacing: 4px;
+li.navbar-item {
     list-style: none;
-    display: inline;
-    margin: 50px;
+    display: inline-block;
 }
 
-a:link, a:visited {
+li.navbar-item a {
+    padding: 20px;
+    borer; 1px  re;
+}
+
+li.navbar-item  a:link, li.navbar-item a:visited {
     text-decoration: none;
     color: #ffffff;
-    }
+}
     
-a:hover {
+li.navbar-item  a:hover {
 	/* text-decoration: underline;  */
-	color: #F2CDA0;
-	}
-a:active {
-	text-decoration: none
-	}
+    color: #F2F2F2;
+    background-color: #F2884B;
+}
