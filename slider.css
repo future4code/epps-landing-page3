@@ -1,0 +1,23 @@
+
+.slider {
+    background: #2e2e2e;
+    height: 450px;
+}
+
+.slider h1 {
+    color: #F29D52;
+    font-size: 44px;
+}
+
+.slider h1 b {
+    color: #F2884B;
+}
+
+
+.slider img {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 483px;
+}
