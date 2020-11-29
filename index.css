@@ -145,6 +145,8 @@ main section {
 .quem-somos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    font-size: 20px;
+    padding: 0 70px;
 }
 
 /* 
@@ -348,62 +350,33 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+*/
 
-@media screen and (max-width: 800px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr); 
-    }      
-
-    .faq-abrir-conta {
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
+@media screen and (max-width: 1028px) {
     
-    .faq-cartao {
-        grid-row: 2/3 ;
-        grid-column: 1/2;
-    }
-    
-    .faq-pix {
-        grid-row: 3/4;
-        grid-column: 1/2;
-    }
-    
-    .faq-investimentos {
-        grid-row: 4/5;
-        grid-column: 1/2;
+    h2 { font-size: 32px;}
+
+    .servicos {
+        grid-template-columns: 1fr;                                                                     1fr;
     }
 
-    #empresa .quem-somos {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
-    .quem-somos h2 {
-        grid-row: 1/2;
-        grid-column: 1/2;
+    .quem-somos { 
+        font-size: 18px;
     }
 
-    .quem-somos p {
-        grid-row: 2/3;
-        grid-column: 1/2;
+    .form .form-item {
+        margin-right: 20px;
     }
-
-  
 
 }
- */
+ 
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 828px) {
     
     body {
         background-color: black;
     }
 
-    main section {
-        width: 100%;
-    }
 
     .slider {
         height: 400px;
@@ -420,10 +393,8 @@ footer a:hover {
     }
 
     .quem-somos {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        text-align: justify;
+        grid-template-columns: 1fr;
+        font-size: 16px;
     }
 
     .servicos {
@@ -474,6 +445,12 @@ footer a:hover {
 
     footer { width: 100%;}
 
-
-
 }
+
+
+@media screen and (max-width: 472px) {
+
+    .quem-somos {
+        padding-top: 0;
+    }
+ }
