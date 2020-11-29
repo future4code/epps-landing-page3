@@ -81,23 +81,28 @@ main {
     display: grid;
 }
 
+/* Setando todas as SECTIONS */
+main section {
+    width: 100%;
+    height: 400px;
+}
+
 /* section que fala sobre a empresa, QUEM-SOMOS */
-#empresa { background-color: #F2F2F2;}
+.empresa { 
+    background-color: #F2F2F2;
+    margin-top: 70px;
+}
 
 
 /* Setando uma section de apresentação  */
-#empresa .slider{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    align-items: center;
+.slider{
     background-color: #F29D52;
-    height: 450px;
 }
 
 /* Setando os elementos da section de apresentação */
 .slider div { 
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
     /* Setando os elementos da section de apresentação  de titulos e paragrafos.*/
@@ -124,27 +129,67 @@ main {
         width: 400px;
     }
 
+
+/* 
+*
+*    sobre / quem somos
+*/
+
+
 /* Setando  um elemento especifico que rala a descrição de QUEM-SOMOS */
-#empresa .quem-somos {
+.sobre {
+    display: grid;
+    background-color: white;
+}
+
+.quem-somos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 100px 100px;
-    text-align: justify;
 }
 
-.quem-somos h2 {
-    font-size: 42px;
-    font-weight: lighter;
+/* 
+*
+*    servicos
+*/
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #9c4716;
 }
 
-.quem-somos span {
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+.servicos h2 { color:  white;}
+
+.info-servicos {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-right: 40px;
 }
 
-.quem-somos p {
-    font-family: Arial, Helvetica, sans-serif;
+.info-item {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    border-left: 0.5em solid #F2CDA0 ;
+    box-shadow: 4px 4px 20px 0 rgba(120,135,182,.3);
 }
+
+.info-item:nth-child(1) {
+    background-color:#F2884B;
+}
+
+.info-item:nth-child(2) {
+    grid-row: 1/3;
+    background-color: #f2f2f2;
+    height: 220px;
+}
+
+.info-item:nth-child(3) {
+    background-color: #F29D52;
+}
+
 
 /* 
 *
@@ -152,68 +197,58 @@ main {
 */
 
 .faq {
-    /* width: 100%; 
-    background-color: #fff; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(, 1fr); */
-    width: 100%;
     background-color: #FFF;
-    /* padding: 20px; */
+    height: 450px;
 }
 
 .faq h2 {
     text-align: center;
-    padding-top: 2em;
     color: #F2884B;
-    background-color: #F2CDA0;
 }
 
 .faq-grid {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     text-align: justify;
-    background-color: #F2CDA0;
+    gap: 10px;
     padding: 2em 4em;
-    /* gap: 1em; */
 }
 
-.faq-abrir-conta {
-    grid-row: 1/2;
-    grid-column: 1/2;
+.faq-grid div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.faq-cartao {
-    grid-row: 2/3 ;
-    grid-column: 1/2;
-}
-
-.faq-pix {
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-
-.faq-investimentos {
-    grid-row: 2/3;
-    grid-column: 2/3;
+.faq-abrir-conta, .faq-cartao, 
+.faq-pix, .faq-investimentos {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid gray;
 }
 
 
 .faq h3 {
     text-align: center;
     font-weight: bold;
-    /* padding-top: 10px; */
+    font-size: 22px;
     color: #F2884B;
 }
 
 .faq p {
-    /* margin: 5em; */
-    align-items: center;
-    width: 480px;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    color: #2e2e2e;
+    background-color: green;
+}
+
+.btn-conta {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    outline: none;
 }
 
 
@@ -221,9 +256,8 @@ main {
 * CONTATO 
 **/
 
-section#contato {
+section.contato {
     background-color: #f2f2f2;
-    width: 100%;
     padding: 4em 0;
 } 
 
@@ -232,7 +266,7 @@ section#contato {
     grid-template-columns: repeat(2, 1fr);
 }
 
- h2{
+h2 {
     font-size: 64px;
     color: #F2884B;
     text-align: center;
@@ -285,11 +319,7 @@ footer {
     background-color: black;
     color:white;
     /* grid-template-columns: 200px 1fr; */
-    position: fixed;
-    bottom: 0;
-    /* width: 100vw;  */
     display: flex;
-    min-width: 100%;
     height: 70px;
 } 
 footer a {
@@ -300,17 +330,10 @@ footer a:hover {
     opacity: 1;
 }
 
-/* footer section {
-    /* display: inline; */
-    /* padding: 10px 0;
-    width: 100vw;
-    
-    margin: auto; */ 
-
 
 @media screen and (max-width: 1200px) {
-    .faq p {
-        width: 320px;
+    .faq-grid div {
+        margin: 1rem;
     }
 }
 
