@@ -163,6 +163,7 @@ main section {
     width: 100%;
     background-color: #fff;
     /* padding: 20px; */
+    border: 1px solid red;
 }
 
 
@@ -211,9 +212,11 @@ section#contato {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.form-contato .form-text h2{
+ h2{
     font-size: 64px;
     color: #F2884B;
+    text-align: center;
+    padding: 20px;
 }
 
 .form-contato .form-item {
