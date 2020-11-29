@@ -155,30 +155,15 @@ main section {
 *    FAAQ
 */
 
-
 .faq {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    /* width: 100%; 
-    background-color: #fff; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(, 1fr); */
-    width: 100vw;
-    background-color: #F2CDA0;
-    /* padding: 20px; */
+    width: 100%;
 }
-
-/* .faq-abrir-conta {
-    grid-template-columns: ;
-    grid-template-rows: ;
-} */
 
 .faq h2 {
     text-align: center;
-    margin-top: 2em;
+    padding-top: 2em;
     color: #F2884B;
+    background-color: #F2CDA0;
 }
 
 .faq-grid {
@@ -186,7 +171,9 @@ main section {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     text-align: justify;
-    margin-top: 4em;
+    background-color: #F2CDA0;
+    padding: 2em 4em;
+    gap: 2em;
 }
 
 .faq-abrir-conta {
@@ -214,7 +201,7 @@ main section {
     text-align: center;
     font-weight: bold;
     /* padding-top: 10px; */
-    color: #F2884B;;
+    color: #F2884B;
 }
 
 
@@ -227,16 +214,6 @@ main section {
     color: #2e2e2e;
 }
 
-@media screen and (min-width: 320px) and (max-width: 420px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr); 
-        height: 200px;
-    }
-
-
-
-}
 
 /* 
 * CONTATO 
@@ -245,6 +222,7 @@ main section {
 section#contato {
     background-color: #f2f2f2;
     width: 100%;
+    padding: 2em auto;
 }
 
 .form-contato {
