@@ -25,19 +25,19 @@
                         <a href="">Início</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="">Quem somos</a>
+                        <a href="#quem-somos">Quem somos</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="">Nossos serviços</a>
+                        <a href="#servico">Nossos serviços</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="">Nosso time</a>
+                        <a href="#time">Nosso time</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="">Perguntas frequentes</a>
+                        <a href="#faq">Perguntas frequentes</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="">Contato</a>
+                        <a href="#contato">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -58,8 +58,8 @@
                     <img src="./img/bank-pay.png" alt="Imagem de um Celular" class="imagem-bank">
                 </div>
             </div>
-            <div class="quem-somos">
-                <h1>Quem <span>Somos</span></h1>
+            <div class="quem-somos" id="quem-somos">
+                <h2>Quem <span>Somos</span></h2>
                 <p>
                     Somos uma empresa de meios de pagamento 
                     que veio para simplificar a sua relação 
@@ -103,7 +103,8 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
+     
             <h2>Perguntas frequentes</h2>    
             <div class="faq-grid">        
                 <div class="faq-abrir-conta">
@@ -123,20 +124,29 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus, ab totam iste tempora vero accusantium ratione corporis id dolorum, esse delectus neque! Cupiditate exercitationem officia nemo, tempore saepe blanditiis.</p>
                 </div> 
             </div>
+          
         </section>
 
-        <section>
+        <section id="contato">
             <div class="contato">
-                <form action="">
-                    nome, tel, email
-
+                <form action="" class="form-contato">
+                    <div class="form-text">
+                        <h2>Fale com a gente :)</h2>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" placeholder="Digite seu nome: ">
+                        <input type="email" placeholder="digite seu e-mail">
+                        <textarea placeholder="Mensagem .."></textarea>
+                        <button class="btn-form">ENVIAR</button>
+                    </div>
+                    
                 </form>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="">
             <section>
                 <img src="./img/logo-branca-transparent.png" alt="Logo F4Bank">
                 <ul class="footer-ul">

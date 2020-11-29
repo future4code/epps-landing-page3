@@ -19,6 +19,7 @@ body {
 
 h1 { font-size: 48px;}
 
+
 header {
     background-color: #000;
     display: flex;
@@ -76,12 +77,17 @@ li.navbar-item  a:hover {
 */
 
 main {
-    padding-top: 70px;
     display: grid;
 }
 
+
+main section { 
+    padding: 70px 0;
+}
+
+
 /* section que fala sobre a empresa, QUEM-SOMOS */
-#empresa { background-color: #F2CDA0;}
+#empresa { background-color: #F2F2F2;}
 
 
 /* Setando uma section de apresentação  */
@@ -130,12 +136,18 @@ main {
     padding: 100px 100px;
 }
 
-.quem-somos h1 {
+.quem-somos h2 {
     font-size: 42px;
     font-weight: lighter;
 }
+
 .quem-somos span {
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quem-somos p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 
@@ -145,6 +157,11 @@ main {
 
 
 .faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* width: 100%; 
+    background-color: #fff; */
     /* display: grid; */
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(, 1fr); */
@@ -226,7 +243,54 @@ main {
 }
 
 
+/* 
+* CONTATO 
+**/
 
+section#contato {
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.form-contato {
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-contato .form-text h2{
+    font-size: 64px;
+    color: #F2884B;
+}
+
+.form-contato .form-item {
+    display: flex;
+    flex-direction: column;
+    background-color:  #F2884B;
+    padding: 30px 40px;
+    border-radius: 20px;
+}
+
+.form-contato .form-item input, textarea {
+    width: 400px;   
+    margin: 5px 0;
+    padding: 15px 30px;
+    border: none;
+    box-shadow: 0 0 1px ghostwhite;
+    border-radius: 10px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-form {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 8px 50px;
+    display: flex;
+    margin-top: 15px;
+    
+}
 
 /* 
 *
