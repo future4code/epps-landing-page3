@@ -43,6 +43,8 @@ nav {
     grid-column: 2/3;
 }
 
+nav.responsivo { display: none;}
+
 ul.navbar { 
     justify-items: center;
     text-align:center;
@@ -95,21 +97,21 @@ main section {
 
 
 /* Setando uma section de apresentação  */
-.slider{
-    background-color: #F29D52;
-}
-
-/* Setando os elementos da section de apresentação */
-.slider div { 
+.slider {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: #F29D52;
+    height: 420px;
+}
+
+.slider div:nth-child(1) {
+    margin: 5em;
+    text-align: center;
 }
 
     /* Setando os elementos da section de apresentação  de titulos e paragrafos.*/
     .slider-titulo {
         text-transform: uppercase;
-        align-items: center;
-        text-align: center;
         
     }
 
@@ -123,10 +125,10 @@ main section {
         align-items: center;
     }
 
-
     .imagem-bank {
-        height: auto;
-        width: 400px;
+        position: relative;
+        width: 500px;
+        padding: 4em 40px;
     }
 
 
@@ -145,6 +147,8 @@ main section {
 .quem-somos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    font-size: 20px;
+    padding: 0 70px;
 }
 
 /* 
@@ -237,9 +241,6 @@ main section {
     color: #F2884B;
 }
 
-.faq p {
-    background-color: green;
-}
 
 .btn-conta {
     background-color: transparent;
@@ -314,14 +315,12 @@ h2 {
 *
 *       FOOTER  
 */
-
 footer {
     background-color: black;
-    color:white;
-    /* grid-template-columns: 200px 1fr; */
+    color: white;
     display: flex;
     height: 70px;
-} 
+}
 footer a {
     opacity: 0.5;
 }
@@ -329,7 +328,7 @@ footer a {
 footer a:hover {
     opacity: 1;
 }
-
+/* 
 
 @media screen and (max-width: 1200px) {
     .faq-grid div {
@@ -353,51 +352,141 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+*/
 
-@media screen and (max-width: 800px) {
-    .faq-grid {
+@media screen and (max-width: 1028px) {
+    
+    h2 { font-size: 32px;}
+
+    .servicos {
+        grid-template-columns: 1fr;                                                                     1fr;
+    }
+
+    .quem-somos { 
+        font-size: 18px;
+    }
+
+    .form .form-item {
+        margin-right: 20px;
+    }
+
+}
+ 
+
+@media screen and (max-width: 880px) {
+    
+    body {
+        background-color: black;
+    }
+
+    .desktop { display: none;}
+
+    section .responsivo { 
+        position: fixed;
+        z-index: 1;
+        display: block; 
+        list-style:none;
+        color: white;
+    }
+
+    .responsivo li  ul{
+        position:absolute;
+        top:25px;
+        right: 5px;
+        width: 200px;
+        background-color:#000;
+        display:none;
+    }
+
+    .responsivo li:hover ul, .responsivo li.over ul{
+        display:block;
+    }
+
+    .responsivo li ul li {
+        padding: 15px 0;
+    }
+    .responsivo li a:hover { 
+        color: wheat;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .slider {
+        display: block;
+        height: 400px;
+    }
+
+    .slider div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 80px 0;
+    }
+
+    .slider div:nth-child(2) { 
+        display: none;
+    }
+
+    .quem-somos {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr); 
-    }      
-
-    .faq-abrir-conta {
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    
-    .faq-cartao {
-        grid-row: 2/3 ;
-        grid-column: 1/2;
-    }
-    
-    .faq-pix {
-        grid-row: 3/4;
-        grid-column: 1/2;
-    }
-    
-    .faq-investimentos {
-        grid-row: 4/5;
-        grid-column: 1/2;
+        font-size: 16px;
     }
 
-    #empresa .quem-somos {
-        /* padding: 50px 50px; */
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
-    .quem-somos h2 {
-        grid-row: 1/2;
-        grid-column: 1/2;
+    .servicos {
+        display: block;
+        padding-top: 40px;
+        height: 500px;
     }
 
-    .quem-somos p {
-        grid-row: 2/3;
-        grid-column: 1/2;
+    .info-servicos {
+        display: block;
+        max-width: 400px;
     }
 
-  
+    .info-item:nth-child(1), 
+    .info-item:nth-child(2),
+    .info-item:nth-child(3) { 
+        margin-left: 22px;
+        width: 350px;
+        height: 110px;
+    }
+
+
+    .faq {
+        height: 500px;
+    }
+
+    section.contato {
+        padding-top: 40px;
+        height: 500px;
+    }
+
+    .form-contato {
+        display: block;
+        max-width: 350px;
+    }
+
+    h2 { font-size: 42px;}
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-contato .form-item input, textarea {
+        width: 100%;
+    }
+
+    footer { width: 100%;}
 
 }
 
 
+@media screen and (max-width: 472px) {
+
+    .quem-somos {
+        padding-top: 0;
+    }
+ }
