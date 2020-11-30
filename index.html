@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" href="./img/f4bank-logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./index.css">
-
     <link href="https://fonts.googleapis.com/css2?family='Roboto'" rel="stylesheet">
     
 </head>
@@ -19,7 +17,7 @@
             </a>
         </section>
         <section>
-            <nav>
+            <nav class="desktop">
                 <ul class="navbar">
                     <li class="navbar-item">
                         <a href="">Início</a>
@@ -38,25 +36,49 @@
                     </li>
                 </ul>
             </nav>
+
+            <nav class="responsivo">
+                <ul class="navbar">
+                    <li class="navbar-item">
+                        <a href="#menu">MENU</a>
+                        <ul id="menu">                                    
+                            <li class="navbar-item">
+                                <a href="#quem-somos">Quem somos</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#servico">Nossos serviços</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#faq">Perguntas frequentes</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
         </section>
     </header>
 
     <main>
         <section class="empresa">
-            <div class="slider">
+            <article class="slider">
                 <div>
                     <h1 class="slider-titulo">
-                    Somos um Banco <br> para todos os <span>brasileiros</span>.
+                    Somos um Banco <br> para todos os
+                    <br><span>brasileiros</span>.
                     </h1>
                     <p class="slider-paragrafo">Tradição e Inovação no seu bolso.</p>
                 </div>
                 <div>
                     <img src="./img/bank-pay.png" alt="Imagem de um Celular" class="imagem-bank">
                 </div>
-            </div>
+            </article>
         </section>
 
-        <section class="sobre">
+        <section class="sobre" id="quem-somos">
             <div class="quem-somos">
                 <h2>Quem <span>Somos</span></h2>
                 <p>
@@ -76,7 +98,7 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="servicos" id="servico">
       
             <h2>Nossos serviços</h2>  
             
@@ -101,7 +123,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
      
             <h2>Perguntas frequentes</h2>    
             <div class="faq-grid">        
@@ -127,7 +149,7 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section class="contato" id="contato">
                 <form action="" class="form-contato">
                     <div class="form-text">
                         <h2>Fale com a gente :)</h2>
@@ -145,31 +167,9 @@
     </main>
 
     <footer>
-            
-                <!-- <img src="./img/logo-branca-transparent.png" alt="Logo F4Bank" class="logo-footer"> -->
-                <!-- <ul class="footer-ul">
-                    <li><a href="#">Teste</a></li>
-                    <li><a href="#">Teste</a></li>
-                    <li><a href="#">Teste</a></li>
-                </ul>
-            </section>
-            <section>
-                <p class="titulo-footer">Produtos</p>
-                <ul class="footer-ul">
-                    <li><a href="#">Teste</a></li>
-                    <li><a href="#">Teste</a></li>
-                    <li><a href="#">Teste</a></li>
-                </ul>
-            </section>
-            <section> -->
-                <!-- <p class="titulo-footer"></p> -->
-                <!-- <ul class="footer-ul"> -->
-                <!-- <section> -->
-                    <a href="https://twitter.com/home" target="_blank"><img src="./img/twitter.png" alt="Logo do Twitter"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.png" alt="Logo do Instagram"></a>
-                    <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.png" alt="Logo do Facebook"></a>
-                <!-- </ul> -->
-            <!-- </section> -->
+        <a href="https://twitter.com/home" target="_blank"><img src="./img/twitter.png" alt="Logo do Twitter"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.png" alt="Logo do Instagram"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.png" alt="Logo do Facebook"></a>
     </footer>
     
 </body>
